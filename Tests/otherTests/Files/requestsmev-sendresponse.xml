@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+	<Body>
+		<SendResponseRequest xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/1.1">
+			<SenderProvidedResponseData Id="SIGNED_BY_CALLER">
+				<MessageID></MessageID>
+				<To>eyJzaWQiOjMxNzY3LCJtaWQiOiJlNzg1N2MyNC02Y2ZkLTExZWEtODBjMi1jMjlhNzgyZjY3YjMiLCJlb2wiOjAsInNsYyI6IngtYXJ0aWZhY3RzLWdvc3VzbHVnaS1pbmZvcm1pa2EtcnVfeHNkX3NtZXYtaW50ZXJhY3Rpb24tMi05Ni1wXzEuMC4yX09ycGhhblBlcnNvblJlcXVlc3QiLCJtbm0iOiIzMzAyMDEifQ==</To>
+				<MessagePrimaryContent xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.1">
+					<tns:ResponsData xmlns:tns="urn://ksbo-service/application/1.0.0">
+						<tns:Status>RESULT</tns:Status>
+						<tns:Comment>Вам выдана лицензия №33333 от 21 января 2021 года. Срок действия лицензии с 22 января 2021 - бессрочно. Вам отправлена выписка из реестра лицензий о выдаче лицензии.</tns:Comment>
+					</tns:ResponsData>
+				</MessagePrimaryContent>
+				<RefAttachmentHeaderList xmlns="urn://x-artefacts-smev-gov-ru/services/message-exchange/types/basic/1.1">
+					<RefAttachmentHeader>
+						<uuid>4f09a981-6224-11eb-b4c4-e03f494418ae</uuid>
+						<Hash>6pBsQ3OJK2ZMgTer+Xv9YlpkUdM5XksM5gOPg8L7kVE=</Hash>
+						<MimeType>application/zip</MimeType>
+					</RefAttachmentHeader>
+				</RefAttachmentHeaderList>
+			</SenderProvidedResponseData>
+			<CallerInformationSystemSignature>
+				<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+					<ds:SignedInfo>
+						<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+						<ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256" />
+						<ds:Reference URI="#SIGNED_BY_CALLER">
+							<ds:Transforms>
+								<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+								<ds:Transform Algorithm="urn://smev-gov-ru/xmldsig/transform" />
+							</ds:Transforms>
+							<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256" />
+							<ds:DigestValue>F674G7bUqTN5bOqbJ3vvHfhd97hGnzVBdS2M5v/nlsM=</ds:DigestValue>
+						</ds:Reference>
+					</ds:SignedInfo>
+					<ds:SignatureValue>3qLwGb1RyxwAuCUkgeJ8iDdJgIB2wdEWuYwtDk0xJaSHry3wHaLxUHAYM4fEM62kNlL5zOgm/HaIafpU8A+N7Q==</ds:SignatureValue>
+					<ds:KeyInfo>
+						<ds:X509Data>
+							<ds:X509Certificate>MIIIsjCCCF+gAwIBAgIRAakP/qBGdECY6hEOXmHvM3QwCgYIKoUDBwEBAwIwggEZMRgwFgYFKoUDZAESDTEwNzY4MjkwMTExMzcxGjAYBggqhQMDgQMBARIMMDA2ODI5MDM5MjMzMQswCQYDVQQGEwJSVTEvMC0GA1UECAwmNjgg0KLQsNC80LHQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwxFTATBgNVBAcMDNCi0LDQvNCx0L7QsjEyMDAGA1UECQwp0YPQu9C40YbQsCDQodC+0LLQtdGC0YHQutCw0Y8sINC00L7QvCAxMTgxGDAWBgNVBAsMD9Ce0YLQtNC10Lsg0K3QnzEeMBwGA1UECgwV0KLQntCT0JHQoyAi0KDQmNCi0KYiMR4wHAYDVQQDDBXQotCe0JPQkdCjICLQoNCY0KLQpiIwHhcNMjAwMzA0MTE0MTE3WhcNMjEwMzA0MTE1MTE3WjCCAf0xGDAWBgUqhQNkARINMTAyNjgwMTAxNDg1NTEaMBgGCCqFAwOBAwEBEgwwMDY4MjUwMDE1MzUxIzAhBgkqhkiG9w0BCQEWFGl0QGc0MS50YW1ib3YuZ292LnJ1MQswCQYDVQQGEwJSVTEvMC0GA1UECAwmNjgg0KLQsNC80LHQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwxFzAVBgNVBAcMDtCa0L7RgtC+0LLRgdC6MSQwIgYDVQQJDBvRg9C7LiDQodCy0L7QsdC+0LTRiywg0LQuIDgxRTBDBgNVBAsMPNC+0YLQtNC10Lsg0LjQvdGE0L7RgNC80LDRhtC40L7QvdC90YvRhSDRgtC10YXQvdC+0LvQvtCz0LjQuTFlMGMGA1UECgxc0JDQtNC80LjQvdC40YHRgtGA0LDRhtC40Y8g0LPQvtGA0L7QtNCwINCa0L7RgtC+0LLRgdC60LAg0KLQsNC80LHQvtCy0YHQutC+0Lkg0L7QsdC70LDRgdGC0LgxdTBzBgNVBAMMbNCY0KEgItCQ0LrRgtC40LLQvdGL0Lkg0LPRgNCw0LbQtNCw0L3QuNC9IiDQs9C+0YDQvtC00LAg0JrQvtGC0L7QstGB0LrQsCDQotCw0LzQsdC+0LLRgdC60L7QuSDQvtCx0LvQsNGB0YLQuDBmMB8GCCqFAwcBAQEBMBMGByqFAwICJAAGCCqFAwcBAQICA0MABEBsxVym7CHnCLHM+6xdliZgmSa7slohPb55bABLTvxVA5+F6dv1uGVBlblMG7ebDKZBr3sfMPvc73KnB97ZzCQXo4IEkTCCBI0wDwYDVR0PAQH/BAUDAwf5gDAdBgNVHQ4EFgQUD2qihRLM6jlZhEw45SSLM5ZcHOswMwYJKwYBBAGCNxUHBCYwJAYcKoUDAgIyAQnojFSB1MQxhe2VO8/SaoLTHoHzGAIBAQIBADCCAWAGA1UdIwSCAVcwggFTgBRvvzxkw+56ifm7zpnSz8/RlgA4qaGCASykggEoMIIBJDEeMBwGCSqGSIb3DQEJARYPZGl0QG1pbnN2eWF6LnJ1MQswCQYDVQQGEwJSVTEYMBYGA1UECAwPNzcg0JzQvtGB0LrQstCwMRkwFwYDVQQHDBDQsy4g0JzQvtGB0LrQstCwMS4wLAYDVQQJDCXRg9C70LjRhtCwINCi0LLQtdGA0YHQutCw0Y8sINC00L7QvCA3MSwwKgYDVQQKDCPQnNC40L3QutC+0LzRgdCy0Y/Qt9GMINCg0L7RgdGB0LjQuDEYMBYGBSqFA2QBEg0xMDQ3NzAyMDI2NzAxMRowGAYIKoUDA4EDAQESDDAwNzcxMDQ3NDM3NTEsMCoGA1UEAwwj0JzQuNC90LrQvtC80YHQstGP0LfRjCDQoNC+0YHRgdC40LiCCwCQy+aEAAAAAAMfMCUGA1UdJQQeMBwGCCsGAQUFBwMIBggrBgEFBQcDAgYGKoUDZAICMDEGCSsGAQQBgjcVCgQkMCIwCgYIKwYBBQUHAwgwCgYIKwYBBQUHAwIwCAYGKoUDZAICMB0GA1UdIAQWMBQwCAYGKoUDZHEBMAgGBiqFA2RxAjCB1wYFKoUDZHAEgc0wgcoMNNCh0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiAo0LLQtdGA0YHQuNGPIDQuMCkMVCLQo9C00L7RgdGC0L7QstC10YDRj9GO0YnQuNC5INGG0LXQvdGC0YAgItCa0YDQuNC/0YLQvtCf0YDQviDQo9CmIiDQstC10YDRgdC40LggMi4wIgwd0KHQpC8xMjQtMzM4MCDQvtGCIDExLjA1LjIwMTgMHdCh0KQvMTI4LTI5ODMg0L7RgiAxOC4xMS4yMDE2MD8GBSqFA2RvBDYMNNCh0JrQl9CYICLQmtGA0LjQv9GC0L7Qn9GA0L4gQ1NQIiAo0LLQtdGA0YHQuNGPIDQuMCkwgaAGA1UdHwSBmDCBlTA3oDWgM4YxaHR0cDovL3NydmNhcy50YW1ib3YuZ292LnJ1L3JhL2NkcC9yY2N0YW1ib3YyLmNybDAtoCugKYYnaHR0cDovL3VjdGFtYm92LnJ1L2ZpbGVzL3JjY3RhbWJvdjIuY3JsMCugKaAnhiVodHRwOi8vcml0YzY4LnJ1L2ZpbGVzL3JjY3RhbWJvdjIuY3JsMIGKBggrBgEFBQcBAQR+MHwwQQYIKwYBBQUHMAKGNWh0dHA6Ly9zcnZjYXMudGFtYm92Lmdvdi5ydS9yYS9jZHAvcmNjdGFtYm92XzIwMTkuY3J0MDcGCCsGAQUFBzAChitodHRwOi8vdWN0YW1ib3YucnUvZmlsZXMvcmNjdGFtYm92XzIwMTkuY3J0MAoGCCqFAwcBAQMCA0EAJemz2Iid9uoYD4QttcYEdGhFxw28I9aOdf/XYqVD5DfxNUNtOFijTRqPkPweF2it93hiq9LDBtzWVSMCm7kXWg==</ds:X509Certificate>
+						</ds:X509Data>
+					</ds:KeyInfo>
+				</ds:Signature>
+			</CallerInformationSystemSignature>
+		</SendResponseRequest>
+	</Body>
+</Envelope>

@@ -1,0 +1,20 @@
+﻿{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "databaseName": "rdev2019",
+    "userName": "postgres",
+    "password": "postgres"
+  },
+  "gate": {
+    "url": "http://10.10.10.55:5000/smev",
+    "endPoints": [
+      "",
+      ""
+    ],
+    "isRemoteSign": true,
+    "chooseEndpointsForProxySmev": "Мок",
+    "chooseEndpointsForProxyMock": "Мок",
+    "choiceEndpointsForSignService": "Мок"
+  }
+}
